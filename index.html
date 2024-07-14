@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch & SMG4</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/amibo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link defer rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <script defer src="./js/scroll.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/glitch_logo.png" alt="Glitch Logo">
+        </div>
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active">Home</li>
+                <li>Videos</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Store</li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="banner">
+        <div class="banner1">
+            <div class="drk">
+                <div>
+
+                    <img src="images/glitch_logo.png" alt="Glitch Logo" class="banner-logo">
+                    <div class="sign">
+                        <span class="fast-flicker">w</span>el<span class="flicker">co</span>me
+                    </div>
+                    <!-- <h1 class="banner-text">WELCOME</h1> -->
+                </div>
+            </div>
+        </div>
+        <div class="banner2">
+            <div class="drk">
+
+                <div class="overlay">
+                    <div id="playButton" style="background-color: transparent">
+                        <img style="background-color: transparent"
+                            src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Play">
+                    </div>
+                    <div id="subCount">Subscribers: <span id="subscriberCount">0</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="videoPopup" class="video-popup">
+        <div class="video-popup-content">
+            <span id="closePopup">&times;</span>
+            <iframe id="youtubePlayer" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <section id="videos">
+        <div class="tabs">
+            <button id="glitchTab" class="active">Glitch</button>
+            <button id="smg4Tab">SMG4</button>
+        </div>
+
+        <div id="glitchVideos" class="video-grid"></div>
+        <div id="smg4Videos" class="video-grid" style="display: none;"></div>
+        <div class="video-navigation">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </section>
+
+
+    <section class="featured-games">
+        <div class="foliage-cap foliage-cap--apple"></div>
+        <h2 class="featured-games__heading pop vp-slide vp-slide--up" id="featured-games__heading">Featured Shows</h2>
+        <ul class="featured-games__list" aria-labelledby="featured-games__heading">
+            <li class="featured-games__item ltr staganima"><a class="featured-games__item-wrap"
+                    href="#featured-games__heading">
+                    <div class="featured-games__image"><img src="./images/smg4card.jpg" alt="" />
+                    </div>
+                    <div class="featured-games__platform-tag-wrap" aria-hidden="true"><span>SMG4</span></div>
+                    <div class="featured-games__details">
+                        <div class="featured-games__image"><img src="./images/smg4card-hover.jpg" alt="" />
+                        </div><span class="featured-games__platform" aria-hidden="true">Sketch Comedy, 2011</span><span
+                            class="featured-games__title" aria-hidden="true">SMG4</span><span
+                            class="featured-games__cta button button--red" aria-hidden="true">Learn more</span>
+                    </div>
+                </a></li>
+            <li class="featured-games__item ltr staganima"><a class="featured-games__item-wrap"
+                    href="#featured-games__heading">
+                    <div class="featured-games__image"><img src="./images/murdercard.jpg" alt="" />
+                    </div>
+                    <div class="featured-games__platform-tag-wrap" aria-hidden="true"><span>Murder Drones</span></div>
+                    <div class="featured-games__details">
+                        <div class="featured-games__image"><img src="./images/murdercard-hover.jpg" alt="" />
+                        </div><span class="featured-games__platform" aria-hidden="true">Horror Comedy, 2021</span><span
+                            class="featured-games__title" aria-hidden="true">Murder
+                            Drones</span><span class="featured-games__cta button button--red" aria-hidden="true">Learn
+                            more</span>
+                    </div>
+                </a></li>
+            <li class="featured-games__item ltr staganima"><a class="featured-games__item-wrap"
+                    href="#featured-games__heading">
+                    <div class="featured-games__image"><img src="./images/circuscard.jpg" alt="" />
+                    </div>
+                    <div class="featured-games__platform-tag-wrap" aria-hidden="true"><span>Digital Circus</span></div>
+                    <div class="featured-games__details">
+                        <div class="featured-games__image"><img src="./images/circuscard-hover.jpg" alt="" />
+                        </div><span class="featured-games__platform" aria-hidden="true">Dark Comedy, 2023</span><span
+                            class="featured-games__title" aria-hidden="true">Digital Circus</span><span
+                            class="featured-games__cta button button--red" aria-hidden="true">Learn
+                            more</span>
+                    </div>
+                </a></li>
+        </ul>
+        <div class="featured-games__more">
+            <p class="vp-slide vp-slide--up vp-delay-8" id="featured-games-title" aria-hidden="true">Available on
+                YouTube.com:</p>
+            <ul class="vp-slide vp-slide--up vp-delay-9" aria-labelledby="featured-games-title">
+                <li><a href="#" target="_blank"><span aria-hidden="true">Glitch</span><span aria-hidden="true">/
+                        </span></a></li>
+                <li><a href="#" target="_blank"><span aria-hidden="true">SMG4</span><span aria-hidden="true"></span></a>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="char--balloon-wrap">
+            <div class="char--balloon-container">
+                <div class="char char--balloon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="amiibo">
+        <div class="row-flex">
+            <h2 class="amiibo__heading pop" id="amiibo__heading">Featured Plushies</h2>
+            <ul class="row-flex amiibo-lineup" aria-labelledby="amiibo__heading">
+
+                <li class="amiibo-lineup__item column-flex-6 column-flex-large-3 ttb staganima"><a
+                        href="#amibo__heading">
+                        <div class="amiibo-lineup__image"><img src="./images/plushie1.png" alt="" />
+                            <div class="amiibo-lineup__circle"></div>
+                        </div><span class="amiibo-lineup__title">Gummigoo Plush</span>
+                    </a></li>
+
+                <li class="amiibo-lineup__item column-flex-6 column-flex-large-3 ttb staganima"><a href="#"
+                        aria-label="Go to Kapp'n amiibo figure detail page.">
+                        <div class="amiibo-lineup__image"><img src="./images/plushie2.png" alt="" />
+                            <div class="amiibo-lineup__circle"></div>
+                        </div><span class="amiibo-lineup__title">Zooble Plush</span>
+                    </a></li>
+
+                <li class="amiibo-lineup__item column-flex-6 column-flex-large-3 ttb staganima"><a href="#">
+                        <div class="amiibo-lineup__image"><img src="./images/plushie3.png" alt="" />
+                            <div class="amiibo-lineup__circle"></div>
+                        </div><span class="amiibo-lineup__title">Kinger Plush</span>
+                    </a></li>
+
+                <li class="amiibo-lineup__item column-flex-6 column-flex-large-3 ttb staganima"><a href="#">
+                        <div class="amiibo-lineup__image"><img src="./images/plushie4.png" alt="" />
+                            <div class="amiibo-lineup__circle"></div>
+                        </div><span class="amiibo-lineup__title">Ragatha Plush</span>
+                    </a></li>
+
+            </ul>
+
+            <a class="button button--yellow amiibo-cta push" href="https://glitchproductions.store/"
+                target="_blank"><span>View our Plushies</span></a>
+        </div>
+        <div class="char char--town"></div>
+    </section>
+
+    <section id="plushies">
+        <h2 class="featured-games__heading pop">Featured Posters</h2>
+        <div class="plushie-grid">
+
+            <div class="card card-0 rtl staganima">
+                <div class="glare-container">
+                    <img src="images/poster1.jpg" alt="Poster 1">
+                    <div class="glare">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-0 rtl staganima">
+                <div class="glare-container">
+                    <img src="images/poster2.jpg" alt="Poster 2">
+                    <div class="glare">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-0 rtl staganima">
+                <div class="glare-container">
+                    <img src="images/poster3.jpg" alt="Poster 3">
+                    <div class="glare">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <a href="https://glitchproductions.store/collections/posters" target="_blank"><button class="button push"
+                id="viewPlushies">View Our
+                Posters</button></a>
+    </section>
+
+
+
+    <footer class="spacer layer1">
+
+        <div class="footer-content">
+
+            <div class="footer-left rtl">
+                <img src="images/glitch_logo.png" alt="Glitch Logo" class="footer-logo">
+            </div>
+            <div class="footer-right">
+                <a href="https://www.youtube.com/c/glitchprod" target="_blank" class="social-link ltr staganima">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
+                </a>
+                <a href="https://twitter.com/glitch_prod" target="_blank" class="social-link ltr staganima">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384065.png" alt="Twitter"> Twitter
+                </a>
+                <a href="https://www.instagram.com/glitch_prod/" target="_blank" class="social-link ltr staganima">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@glitch_productions?lang=en" target="_blank"
+                    class="social-link ltr staganima">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"> TikTok
+                </a>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-icon').click(function () {
+                $('nav ul').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
